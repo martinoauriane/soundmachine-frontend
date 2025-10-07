@@ -1,5 +1,7 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
+import UpdateSound from "../components/UpdateSound";
+import Input from "@mui/material/Input";
 
 function HomeScreen() {
   return (
@@ -12,7 +14,8 @@ function HomeScreen() {
         }}
       />
       <SearchBar />
-      <link ahref="/"></link>
+      <Input defaultValue={"Search a sound"} />
+      <UpdateSound />
     </div>
   );
 }

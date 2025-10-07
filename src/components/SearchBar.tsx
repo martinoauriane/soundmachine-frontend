@@ -4,7 +4,11 @@ export function SearchBar() {
 
   return (
     <div>
-      <input className="searchBar" type="text" placeholder="Enter a City..." />
+      <input
+        className="searchBar"
+        type="text"
+        placeholder="Search a sound..."
+      />
     </div>
   );
 }
