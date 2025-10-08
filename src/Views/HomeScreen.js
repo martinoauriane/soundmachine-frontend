@@ -14,7 +14,6 @@ function HomeScreen() {
         }}
       />
       <SearchBar />
-      <Input defaultValue={"Search a sound"} />
       <UpdateSound />
     </div>
   );

@@ -9,6 +9,7 @@ const colors = {
   white: "#ffffffff",
   pink: "#fd9fc3ff",
   green: "#15e052ff",
+  pale_green: "#66f591ff",
   opacity: "#291c1c2c",
   orange: "#rgba(247, 164, 41, 1)",
 };

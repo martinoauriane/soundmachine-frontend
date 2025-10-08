@@ -1,0 +1,17 @@
+.update-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #19ff21;
+  border: none;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.update-button:hover {
+  transform: scale(1.05);
+  background-color: #32ec3b;
+}
