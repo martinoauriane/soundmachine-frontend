@@ -1,18 +1,95 @@
-.browse-by-category {
-  background-color: #a7ffc1;
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* scroll horizontal */
+  padding: 10px 0;
+  gap: 10px; /* espace entre les boutons */
+}
+
+.category-button {
+  flex: 0 0 auto; /* évite que le bouton se rétrécisse */
+  padding: 8px 16px;
+  background-color: #f0f0f0;
   border: none;
-  width: 800px;
-  height: 300px;
-  border-radius: 20px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
+  white-space: nowrap; /* évite que le texte casse */
 }
 
-.browse-by-category:hover {
-  transform: scale(1.05);
-  background-color: #9dffaa;
+.category-button:hover {
+  background-color: #ddd;
 }
 
+/* Conteneur principal */
 .browsecontainer {
-  left: 30px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Titre */
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Conteneur scrollable */
+.scroll-container {
+  display: flex;
+  overflow-x: auto; /* scroll horizontal */
+  cursor: grab; /* curseur pour drag */
+  gap: 10px; /* espace entre les boutons */
+  padding: 10px 0;
+  user-select: none; /* empêche la sélection du texte pendant le drag */
+  scroll-behavior: smooth; /* scroll fluide */
+}
+
+/* Curseur pendant le drag */
+.scroll-container:active {
+  cursor: grabbing;
+}
+
+/* Boutons de catégorie */
+.category-button {
+  flex: 0 0 auto; /* empêche le bouton de rétrécir */
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  white-space: nowrap; /* empêche le texte de se couper */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Hover effect */
+.category-button:hover {
+  background-color: #ddd;
+}
+
+/* Optionnel : personnaliser la scrollbar */
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Optionnel : cacher la scrollbar pour un style plus clean */
+.scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
 }

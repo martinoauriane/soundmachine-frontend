@@ -8,7 +8,7 @@ export function UploadSound() {
   };
 
   return (
-    <div style={containerStyle}>
+    <div>
       <button className="update-button" onClick={browsingLibrary}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,19 +25,10 @@ export function UploadSound() {
             d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4zm11-2h-2v3h-3v2h3v3h2v-3h3V9h-3z"
           />
         </svg>
-        <p> Upload a sound </p>
+        <p className="title"> Upload a sound </p>
       </button>
     </div>
   );
 }
-
-const containerStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: 500,
-  height: 300,
-  borderRadius: 10,
-};
 
 export default UploadSound;

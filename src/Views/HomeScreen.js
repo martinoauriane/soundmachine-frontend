@@ -2,7 +2,7 @@ import React from "react";
 
 //components
 import SearchBar from "../components/InputSearch";
-import UpdateSound from "../components/UpdateSound";
+import UploadSound from "../components/UploadSound";
 import MostPopularSoundsComponent from "../components/MostPopularSoundsComponent";
 import BrowseByCategories from "../components/BrowseByCategoriesComponent";
 //style
@@ -27,10 +27,10 @@ function HomeScreen() {
         <button className="nav-button"> My Account </button>
         <button className="nav-button"> Settings</button>
       </div>
-      <MostPopularSoundsComponent />
+      <BrowseByCategories />
       <div className="widgets">
-        <BrowseByCategories />
-        <UpdateSound />
+        <MostPopularSoundsComponent />
+        <UploadSound />
       </div>
     </div>
   );

@@ -1,11 +1,10 @@
 .most-popular-sounds {
   display: flex;
-  left: 20px;
   border-radius: 20px;
-  width: 1700px;
+  width: 170%;
   height: 400px;
   margin: 20px;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 10px;
   background-color: aquamarine;
 }
