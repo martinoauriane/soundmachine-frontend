@@ -1,0 +1,18 @@
+.browse-by-category {
+  background-color: #a7ffc1;
+  border: none;
+  width: 800px;
+  height: 300px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.browse-by-category:hover {
+  transform: scale(1.05);
+  background-color: #9dffaa;
+}
+
+.browsecontainer {
+  left: 30px;
+}

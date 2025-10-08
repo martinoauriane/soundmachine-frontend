@@ -1,8 +1,8 @@
 import React from "react";
 import colors from "./colors";
-import "./updateSound.css";
+import "./uploadSounds.css";
 
-export function UpdateSound() {
+export function UploadSound() {
   const browsingLibrary = () => {
     alert("browsing library to update sound");
   };
@@ -25,6 +25,7 @@ export function UpdateSound() {
             d="M4 8H2v12c0 1.103.897 2 2 2h12v-2H4zm11-2h-2v3h-3v2h3v3h2v-3h3V9h-3z"
           />
         </svg>
+        <p> Upload a sound </p>
       </button>
     </div>
   );
@@ -39,4 +40,4 @@ const containerStyle = {
   borderRadius: 10,
 };
 
-export default UpdateSound;
+export default UploadSound;
