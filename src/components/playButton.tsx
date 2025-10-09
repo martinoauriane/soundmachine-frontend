@@ -25,14 +25,10 @@ export function PlayButton() {
     <div className="play-container">
       <button onClick={handleClick} disabled={!isLoaded}>
         {!isPlaying && (
-          <img src={require("../theme/play.png")} alt="play" className="icon" />
+          <img src={require("../theme/play.png")} className="icon" />
         )}
         {isPlaying && (
-          <img
-            src={require("../theme/pause.png")}
-            alt="pause"
-            className="icon"
-          />
+          <img src={require("../theme/pause.png")} className="icon" />
         )}
       </button>
     </div>

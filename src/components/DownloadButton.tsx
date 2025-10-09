@@ -9,16 +9,12 @@ export function DownloadButton() {
   const Download = () => {};
 
   return (
-    <div style={divstyle}>
+    <div>
       <button onClick={Download}>
         <img src={require(`../theme/download.png`)} className="icon" />
       </button>
     </div>
   );
 }
-
-const divstyle = {
-  display: "flex",
-};
 
 export default DownloadButton;
