@@ -1,0 +1,19 @@
+.audio-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: rgb(245, 247, 248);
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.button-icon {
+  background-color: aqua;
+}
+
+.play-container {
+  background-color: none;
+}

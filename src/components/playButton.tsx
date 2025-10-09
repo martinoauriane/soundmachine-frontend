@@ -1,28 +1,45 @@
-/* import useSound from "use-sound";
+import { useSound } from "react-sounds";
+import "../css/audioplayer.css";
 
-import boopSfx from "../../sounds/boop.mp3"; */
-import { useState } from "react";
 export function PlayButton() {
-  /*   const mySound = require("../assets/file_name.mp3");
-   */ /*   const [play, setPlay] = useState(false);
-   */
+  const customSound = "../public/sounds/merry-christmas-sounds.mp3";
+
+  const { play, stop, pause, resume, isPlaying, isLoaded } = useSound(
+    customSound,
+    {
+      volume: 0.8,
+      rate: 1.2,
+      loop: true,
+    }
+  );
+
+  const handleClick = () => {
+    if (!isPlaying) {
+      play();
+    } else {
+      stop();
+    }
+  };
 
   return (
-    <div style={divstyle}>
-      <button>
-        <img
-          src={require(`../theme/play.png`)}
-          alt="sun"
-          style={{
-            visibility: "visible",
-          }}
-        />
+    <div className="play-container">
+      <button onClick={handleClick} disabled={!isLoaded}>
+        {!isPlaying && (
+          <img src={require("../theme/play.png")} alt="play" className="icon" />
+        )}
+        {isPlaying && (
+          <img
+            src={require("../theme/pause.png")}
+            alt="pause"
+            className="icon"
+          />
+        )}
       </button>
     </div>
   );
 }
 
-const divstyle = {
+const divStyle = {
   display: "flex",
 };
 

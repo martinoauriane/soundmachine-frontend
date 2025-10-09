@@ -1,22 +1,18 @@
 import React from "react";
+
+// components
 import PlayButton from "./playButton";
+import DownloadButton from "./DownloadButton";
+import { useSound } from "react-sounds";
 
-type Track = {
-  title: string;
-  author: string;
-  creationDate: String;
-  category: String;
-};
-
-export function track() {
+function SoundPlayer() {
   return (
-    <div style={divstyle}>
+    <div className="audio-container">
       <p> sound name </p>
       <PlayButton />
+      <DownloadButton />
     </div>
   );
 }
 
-const divstyle = {
-  display: "flex",
-};
+export default SoundPlayer;

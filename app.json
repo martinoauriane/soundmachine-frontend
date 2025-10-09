@@ -1,0 +1,13 @@
+{
+  "plugins": ["expo-audio"],
+  "expo": {
+    "plugins": [
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ]
+    ]
+  }
+}

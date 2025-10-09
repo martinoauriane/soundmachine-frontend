@@ -5,6 +5,8 @@ import SearchBar from "../components/InputSearch";
 import UploadSound from "../components/UploadSound";
 import MostPopularSoundsComponent from "../components/MostPopularSoundsComponent";
 import BrowseByCategories from "../components/BrowseByCategoriesComponent";
+import AudioPlayer from "../components/AudioPlayer";
+
 //style
 import "../css/navbar.css";
 import "../css/widgets.css";
@@ -21,7 +23,6 @@ function HomeScreen() {
             visibility: "visible",
           }}
         />
-        <button className="nav-button"> Categories </button>
         <SearchBar />
         <button className="nav-button"> My library </button>
         <button className="nav-button"> My Account </button>
@@ -32,6 +33,7 @@ function HomeScreen() {
         <MostPopularSoundsComponent />
         <UploadSound />
       </div>
+      <AudioPlayer />
     </div>
   );
 }
