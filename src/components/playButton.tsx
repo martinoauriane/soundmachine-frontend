@@ -23,7 +23,7 @@ export function PlayButton() {
 
   return (
     <div className="play-container">
-      <button onClick={handleClick} disabled={!isLoaded}>
+      <button onClick={handleClick} disabled={!isLoaded} className="button">
         {!isPlaying && (
           <img src={require("../theme/play.png")} className="icon" />
         )}
