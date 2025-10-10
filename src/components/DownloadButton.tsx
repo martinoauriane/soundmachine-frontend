@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { useSound } from "react-sounds";
-import { playSound } from "react-sounds";
+import useSound from "use-sound";
 import "../css/audioplayer.css";
+import axios from "axios";
 
 export function DownloadButton() {
   const customSound = "/sounds/notification.mp3";
   const stop = useSound(customSound);
 
-  const Download = () => {};
-
   return (
     <div>
-      <button onClick={Download} className="button">
-        <img src={require(`../theme/download.png`)} className="icon" />
-      </button>
+      <a href="/sounds/merry-christmas-sounds.mp3" download="christmas_sound">
+        <button className="button">
+          <img src={require(`../theme/download.png`)} className="icon" />
+        </button>
+      </a>
     </div>
   );
 }
