@@ -1,4 +1,5 @@
 .audio-container {
+  border-radius: 30px;
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -30,10 +31,15 @@
 }
 
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 .play-container {
   background-color: none;
+}
+
+.rendering-track {
+  gap: 20px;
+  margin: 20px;
 }
