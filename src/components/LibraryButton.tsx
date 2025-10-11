@@ -3,19 +3,23 @@ import useSound from "use-sound";
 import "../css/audioplayer.css";
 import axios from "axios";
 
-export function DownloadButton({ soundUrl, soundName }: any) {
+export function LibraryButton({ soundUrl, soundName }: any) {
   const customSound = "/sounds/notification.mp3";
   const stop = useSound(customSound);
+
+  /* to do: create a user store */
+
+  /* Add to user library any time the button is clicked */
 
   return (
     <div>
       <a href={soundUrl} download={soundName}>
         <button className="button">
-          <img src={require(`../theme/download.png`)} className="icon" />
+          <img src={require(`../theme/libraryAdd.png`)} className="icon" />
         </button>
       </a>
     </div>
   );
 }
 
-export default DownloadButton;
+export default LibraryButton;

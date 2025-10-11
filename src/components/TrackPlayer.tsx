@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
+
 //libraries
 import useSound from "use-sound";
+
 // components
 import PlayButton from "./playButton";
 import Spacer from "./spacer";
 import DownloadButton from "./DownloadButton";
+
 //style
 import "../css/audioplayer.css";
+import LibraryButton from "./LibraryButton";
 
-const TrackPlayer = ({ trackUrl }: any) => {
+const TrackPlayer = ({ trackUrl, trackName }: any) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // useSound returns
@@ -63,7 +67,7 @@ const TrackPlayer = ({ trackUrl }: any) => {
 
   return (
     <div className="audio-container">
-      <p className="sound-name">Merry Christmas 🎵</p>
+      <p className="sound-name"> {trackName} </p>
       <Spacer />
       <PlayButton
         play={play}
@@ -84,7 +88,8 @@ const TrackPlayer = ({ trackUrl }: any) => {
           {Math.floor(soundPosition)}s / {Math.floor(soundDuration)}s
         </span>
       </div>
-      <DownloadButton />
+      <DownloadButton soundUrl={trackUrl} soundName={trackName} />
+      <LibraryButton soundUrl={trackUrl} soundName={trackName} />
     </div>
   );
 };

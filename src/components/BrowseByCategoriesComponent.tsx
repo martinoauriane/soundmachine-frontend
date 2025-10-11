@@ -1,21 +1,14 @@
 import React, { useRef } from "react";
+
+// style
 import "../css/browsebycategories.css";
+import { categories } from "../utils";
 
-export const BrowseByCategories: React.FC = () => {
+interface BrowseByCategoriesProps {
+  onSelect: (category: string) => void;
+}
+export const BrowseByCategories = ({ onSelect }: BrowseByCategoriesProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  const categories: string[] = [
-    "Funk",
-    "Electronica",
-    "Hip Hop and R&B",
-    "Rock",
-    "Factory and Warehouse",
-    "Drums",
-    "Guitar",
-    "Synth Keys",
-    "Piano",
-    "Bass",
-  ];
 
   // Variables pour le drag-to-scroll
   let isDown = false;
@@ -46,8 +39,7 @@ export const BrowseByCategories: React.FC = () => {
   };
 
   const handleCategoryClick = (category: string) => {
-    alert(`Tu as sélectionné : ${category}`);
-    // Ici tu peux mettre à jour ton son
+    onSelect(category);
   };
 
   return (

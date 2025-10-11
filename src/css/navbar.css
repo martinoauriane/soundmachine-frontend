@@ -24,6 +24,10 @@
   flex-direction: row;
 }
 
+.navBarTitles {
+  font-style: none;
+}
+
 .nav-button {
   background-color: rgb(255, 255, 255);
   border: none;
