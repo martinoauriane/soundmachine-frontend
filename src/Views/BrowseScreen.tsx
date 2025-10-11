@@ -14,7 +14,7 @@ import { soundsArray } from "../utils";
 import "../css/navbar.css";
 import "../css/widgets.css";
 
-function CategoryScreen() {
+function BrowseScreen() {
   const [tracksArray, setTracksArray] = useState<Song[]>();
 
   useEffect(() => {
@@ -50,14 +50,18 @@ function CategoryScreen() {
           }}
         />
         <SearchBar />
-        <NavLink to="/browseSounds"> OK </NavLink>
-        <button className="nav-button"> My library </button>
-        <button className="nav-button"> My Account </button>
-        <button className="nav-button"> Settings</button>
+        <NavLink to="/" className="navBarTitles">
+          Home
+        </NavLink>
+        <NavLink to="/browseSounds" className="navBarTitles">
+          Browse sounds
+        </NavLink>
+        <NavLink to="/browseSounds"> My library </NavLink>
+        <NavLink to="/browseSounds"> Settings </NavLink>
       </div>
       <BrowseByCategories onSelect={updateTracksList} />
       <div>{listSounds}</div>
     </div>
   );
 }
-export default CategoryScreen;
+export default BrowseScreen;

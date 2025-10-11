@@ -23,12 +23,13 @@ function HomeScreen() {
           }}
         />
         <SearchBar />
+        <NavLink to="/" className="navBarTitles">
+          Home
+        </NavLink>
         <NavLink to="/browseSounds" className="navBarTitles">
-          {" "}
-          Browse sounds{" "}
+          Browse sounds
         </NavLink>
         <NavLink to="/browseSounds"> My library </NavLink>
-        <NavLink to="/browseSounds"> My account </NavLink>
         <NavLink to="/browseSounds"> Settings </NavLink>
       </div>
       <div className="widgets">
