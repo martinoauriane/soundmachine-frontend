@@ -13,6 +13,7 @@ import { soundsArray } from "../utils";
 //style
 import "../css/navbar.css";
 import "../css/widgets.css";
+import Navbar from "../components/Navbar";
 
 function BrowseScreen() {
   const [tracksArray, setTracksArray] = useState<Song[]>();
@@ -31,6 +32,7 @@ function BrowseScreen() {
     setTracksArray(tracks);
   };
 
+  // rendering each sound with TrackPlayer (play/pause)
   const listSounds = tracksArray?.map((sound) => {
     return (
       <div className="rendering-track">
@@ -40,25 +42,7 @@ function BrowseScreen() {
   });
   return (
     <div className="main">
-      <div className="nav-bar">
-        <img
-          className="soundmachine-logo"
-          src={require(`../theme/soundmachine.png`)}
-          alt="sun"
-          style={{
-            visibility: "visible",
-          }}
-        />
-        <SearchBar />
-        <NavLink to="/" className="navBarTitles">
-          Home
-        </NavLink>
-        <NavLink to="/browseSounds" className="navBarTitles">
-          Browse sounds
-        </NavLink>
-        <NavLink to="/browseSounds"> My library </NavLink>
-        <NavLink to="/browseSounds"> Settings </NavLink>
-      </div>
+      <Navbar />
       <BrowseByCategories onSelect={updateTracksList} />
       <div>{listSounds}</div>
     </div>
