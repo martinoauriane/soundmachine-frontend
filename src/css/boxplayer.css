@@ -1,0 +1,22 @@
+.box-player-container {
+  width: 140px;
+  height: 140px;
+  background-color: rgba(88, 88, 97, 0.322);
+  display: flex; /* ajoute Flexbox */
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  flex-direction: column; /* garde les éléments empilés si besoin */
+}
+
+.button-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+
+  width: 50px; /* ou une taille fixe adaptée */
+  height: 50px;
+}

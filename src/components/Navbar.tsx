@@ -1,37 +1,40 @@
 import React from "react";
-import "./Navbar.css";
+import { NavLink } from "react-router-dom";
+// components
+import SearchBar from "./InputSearch";
+// style
+import "../css/navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-        <a href="/" className="logo">
-          ShopNow
-        </a>
-      </div>
-      <div className="navbar-center">
-        <ul className="nav-links">
-          <li>
-            <a href="/products">Products</a>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div className="navbar-right">
-        <a href="/cart" className="cart-icon">
-          <i className="fas fa-shopping-cart"></i>
-          <span className="cart-count">0</span>
-        </a>
-        <a href="/account" className="user-icon">
-          <i className="fas fa-user"></i>
-        </a>
-      </div>
-    </nav>
+    <div className="nav-bar">
+      <img
+        className="soundmachine-logo"
+        src={require(`../theme/soundmachine.png`)}
+        alt="sun"
+        style={{
+          visibility: "visible",
+        }}
+      />
+      <SearchBar />
+      <NavLink to="/" className="navBarTitles">
+        Home
+      </NavLink>
+      <NavLink to="/browseSounds" className="navBarTitles">
+        Browse sounds
+      </NavLink>
+      <NavLink to="/my-profile"> My Profile </NavLink>
+      <button className="button-none">
+        <img
+          className="logo"
+          src={require(`../theme/log-out.png`)}
+          alt="sun"
+          style={{
+            visibility: "visible",
+          }}
+        />
+      </button>
+    </div>
   );
 };
 

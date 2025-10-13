@@ -1,10 +1,27 @@
 .most-popular-sounds {
   display: flex;
-  border-radius: 20px;
-  width: 170%;
+  width: 900px;
   height: 400px;
   margin: 20px;
   padding: 10px;
   border-radius: 10px;
   background-color: aquamarine;
+  gap: 20px; /* pour séparer les box */
+}
+
+.sound-box-list {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+  gap: 20px;
+  flex-wrap: wrap; /* permet de passer à la ligne si trop de box */
+  justify-content: center; /* ou space-around / space-between selon le besoin */
+  align-items: center; /* aligne verticalement */
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

@@ -16,3 +16,14 @@
 .spacer {
   flex-grow: 1;
 }
+
+.button-none {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.logo {
+  height: 30px; /* Taille du logo */
+  width: auto;
+}

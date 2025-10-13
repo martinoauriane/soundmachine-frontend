@@ -5,12 +5,14 @@ interface PlayButtonProps {
   pause: () => void;
   isPlaying: boolean;
   action?: () => void; // nouvelle prop
+  style?: string;
 }
 export function PlayButton({
   play,
   pause,
   isPlaying,
   action,
+  style,
 }: PlayButtonProps) {
   const handleClick = (isPlaying: boolean) => {
     if (!isPlaying) play();
@@ -22,7 +24,10 @@ export function PlayButton({
 
   return (
     <div className="play-container">
-      <button onClick={() => handleClick(isPlaying)} className="button">
+      <button
+        onClick={() => handleClick(isPlaying)}
+        className={style ? style : "button"}
+      >
         {!isPlaying && (
           <img src={require("../theme/play.png")} className="icon" />
         )}
