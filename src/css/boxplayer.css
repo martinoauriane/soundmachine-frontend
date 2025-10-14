@@ -6,6 +6,7 @@
   justify-content: center; /* centre horizontalement */
   align-items: center; /* centre verticalement */
   flex-direction: column; /* garde les éléments empilés si besoin */
+  border-radius: 30px;
 }
 
 .button-box {

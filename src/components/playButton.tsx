@@ -29,10 +29,10 @@ export function PlayButton({
         className={style ? style : "button"}
       >
         {!isPlaying && (
-          <img src={require("../theme/play.png")} className="icon" />
+          <img src="../../public/theme/play.png" className="icon" />
         )}
         {isPlaying && (
-          <img src={require("../theme/pause.png")} className="icon" />
+          <img src="../../public/theme/pause.png" className="icon" />
         )}
       </button>
     </div>

@@ -1,12 +1,14 @@
 import { useState } from "react";
 // components
-import BoxPlayer from "./BoxPlayer";
+import SoundBox from "./SoundBox";
 // utils
 import { soundsArray } from "../utils";
 // style
 import "../css/mostPopularSounds.css";
 import "../css/generic.css";
 import { Box } from "@mui/material";
+import Spacer from "./spacer";
+import ArrowButton from "./ArrowButton";
 
 export function MostPopularSoundsComponent() {
   const [inputText, setInputText] = useState("");
@@ -23,7 +25,7 @@ export function MostPopularSoundsComponent() {
   const horizonatalSoundList = soundsArray.map((sound) => {
     return (
       <div className="sound">
-        <BoxPlayer trackName={sound.name} trackUrl={sound.url} />
+        <SoundBox trackName={sound.name} trackUrl={sound.url} />
       </div>
     );
   });
@@ -31,6 +33,9 @@ export function MostPopularSoundsComponent() {
   return (
     <div className="most-popular-sounds">
       <p className="title"> Most popular sounds this week </p>
+      <ArrowButton pic="../../public/theme/left-arrow.png" />
+      <ArrowButton pic="./../public/theme/right-arrow.png" />
+      <Spacer />
       <div className="body">
         <div className="sound-box-list">{horizonatalSoundList}</div>
       </div>

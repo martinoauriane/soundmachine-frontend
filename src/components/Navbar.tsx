@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="nav-bar">
       <img
         className="soundmachine-logo"
-        src={require(`../theme/soundmachine.png`)}
+        src="/theme/soundmachine.png"
         alt="sun"
         style={{
           visibility: "visible",
@@ -27,7 +27,7 @@ const Navbar = () => {
       <button className="button-none">
         <img
           className="logo"
-          src={require(`../theme/log-out.png`)}
+          src="/theme/log-out.png"
           alt="sun"
           style={{
             visibility: "visible",

@@ -15,7 +15,7 @@ export function LibraryButton({ soundUrl, soundName }: any) {
     <div>
       <a href={soundUrl} download={soundName}>
         <button className="button">
-          <img src={require(`../theme/libraryAdd.png`)} className="icon" />
+          <img src="../../public/theme/download.png" className="icon" />
         </button>
       </a>
     </div>

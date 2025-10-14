@@ -11,7 +11,7 @@ export function DownloadButton({ soundUrl, soundName }: any) {
     <div>
       <a href={soundUrl} download={soundName}>
         <button className="button">
-          <img src={require(`../theme/download.png`)} className="icon" />
+          <img src="../../public/theme/download.png" className="icon" />
         </button>
       </a>
     </div>

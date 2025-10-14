@@ -14,7 +14,7 @@ import { soundsArray } from "../utils";
 import "../css/audioplayer.css";
 import "../css/boxplayer.css";
 
-const BoxPlayer = ({ trackUrl, trackName }: any) => {
+const SoundBox = ({ trackUrl, trackName }: any) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   // useSound returns
@@ -55,4 +55,4 @@ const BoxPlayer = ({ trackUrl, trackName }: any) => {
   );
 };
 
-export default BoxPlayer;
+export default SoundBox;
