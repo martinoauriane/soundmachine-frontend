@@ -1,27 +1,97 @@
 .most-popular-sounds {
-  display: flex;
-  width: 900px;
-  height: 280px;
+  display: block;
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
   margin: 20px;
-  padding: 10px;
+  padding: 16px;
   border-radius: 10px;
   background-color: aquamarine;
-  gap: 20px; /* pour séparer les box */
+  box-sizing: border-box;
+}
+
+.mps-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .sound-box-list {
   display: flex;
   flex-direction: row;
-  margin: 10px;
-  padding: 10px;
-  gap: 20px;
-  flex-wrap: wrap; /* permet de passer à la ligne si trop de box */
-  justify-content: center; /* ou space-around / space-between selon le besoin */
-  align-items: center; /* aligne verticalement */
+  margin: 0 8px;
+  padding: 8px;
+  gap: 16px;
+  flex-wrap: nowrap; /* horizontal scroll */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sound {
+  flex: 0 0 auto;
+}
+
+.sound-box-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.sound-box-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.mps-arrow {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mps-arrow img {
+  width: 24px;
+  height: 24px;
+}
+
+.mps-arrow.left {
+  margin-right: 4px;
+}
+
+.mps-arrow.right {
+  margin-left: 4px;
+}
+
+.sound-box {
+  width: 200px;
+  height: 140px;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+}
+
+.sound-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.sound-meta {
+  font-size: 12px;
+  color: #666;
 }

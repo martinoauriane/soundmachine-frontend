@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useRef, useState } from "react";
 // components
 import SoundBox from "./SoundBox";
 // utils
@@ -22,22 +22,42 @@ export function MostPopularSoundsComponent() {
     date: string;
   };
 
-  const horizonatalSoundList = soundsArray.map((sound) => {
+  const trackListRef = useRef<HTMLDivElement | null>(null);
+
+  const horizonatalSoundList = soundsArray.map((sound, idx) => {
+    const key = (sound as any).id ?? `${sound.name}-${idx}`;
     return (
-      <div className="sound">
+      <div className="sound" key={key}>
         <SoundBox trackName={sound.name} trackUrl={sound.url} />
       </div>
     );
   });
 
+  const scroll = (dir: "left" | "right") => {
+    const el = trackListRef.current;
+    if (!el) return;
+    const amt = Math.floor(el.clientWidth * 0.6);
+    el.scrollBy({ left: dir === "left" ? -amt : amt, behavior: "smooth" });
+  };
+
   return (
     <div className="most-popular-sounds">
       <p className="title"> Most popular sounds this week </p>
-      <ArrowButton pic="../../public/theme/left-arrow.png" />
-      <ArrowButton pic="./../public/theme/right-arrow.png" />
-      <Spacer />
-      <div className="body">
-        <div className="sound-box-list">{horizonatalSoundList}</div>
+
+      <div className="mps-content">
+        <button className="mps-arrow left" onClick={() => scroll("left")}>
+          <img src="/theme/left-arrow.png" alt="left" />
+        </button>
+
+        <div className="body">
+          <div className="sound-box-list" ref={trackListRef}>
+            {horizonatalSoundList}
+          </div>
+        </div>
+
+        <button className="mps-arrow right" onClick={() => scroll("right")}>
+          <img src="/theme/right-arrow.png" alt="right" />
+        </button>
       </div>
     </div>
   );

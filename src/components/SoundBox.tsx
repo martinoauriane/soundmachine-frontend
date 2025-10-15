@@ -35,9 +35,7 @@ const SoundBox = ({ trackUrl, trackName }: any) => {
 
   const handlePause = () => {
     const pausedCursorPosition = sound.seek();
-    console.log("paused position", pausedCursorPosition);
     setSoundPosition(pausedCursorPosition);
-    console.log("Pause appuyé, position du curseur sauvegardée");
   };
 
   return (
@@ -49,7 +47,6 @@ const SoundBox = ({ trackUrl, trackName }: any) => {
         action={handlePause}
         style="button-box"
       />
-      <Spacer />
       <p className="sound-name"> {trackName} </p>
     </div>
   );

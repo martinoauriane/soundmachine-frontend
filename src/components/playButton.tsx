@@ -28,12 +28,8 @@ export function PlayButton({
         onClick={() => handleClick(isPlaying)}
         className={style ? style : "button"}
       >
-        {!isPlaying && (
-          <img src="../../public/theme/play.png" className="icon" />
-        )}
-        {isPlaying && (
-          <img src="../../public/theme/pause.png" className="icon" />
-        )}
+        {!isPlaying && <img src="/theme/play.png" className="icon" />}
+        {isPlaying && <img src="/theme/pause.png" className="icon" />}
       </button>
     </div>
   );
