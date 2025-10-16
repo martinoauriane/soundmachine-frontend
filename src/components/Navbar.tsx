@@ -18,12 +18,14 @@ const Navbar = () => {
       />
       <SearchBar />
       <NavLink to="/" className="navBarTitles">
-        Home
+        <p className="archivo-black-regular"> HOME </p>
       </NavLink>
       <NavLink to="/browseSounds" className="navBarTitles">
-        Browse sounds
+        <p className="archivo-black-regular"> BROWSE SOUNDS </p>
       </NavLink>
-      <NavLink to="/my-profile"> My profile </NavLink>
+      <NavLink to="/my-profile">
+        <p className="archivo-black-regular"> PROFILE </p>
+      </NavLink>
       <button className="button-none">
         <img
           className="logo"

@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "../components/InputSearch";
 import BrowseByCategories from "../components/BrowseByCategoriesComponent";
 import TrackPlayer from "../components/TrackPlayer";
+import Navbar from "../components/Navbar";
 
 // utils
 import { Song } from "../utils";
@@ -13,8 +14,6 @@ import { soundsArray } from "../utils";
 //style
 import "../css/navbar.css";
 import "../css/home-page.css";
-
-import Navbar from "../components/Navbar";
 
 function BrowseScreen() {
   const [tracksArray, setTracksArray] = useState<Song[]>();

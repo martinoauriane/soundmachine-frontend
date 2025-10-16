@@ -42,7 +42,7 @@ export function MostPopularSoundsComponent() {
 
   return (
     <div className="most-popular-sounds">
-      <p className="title"> Most popular sounds this week </p>
+      <p className="balise"> Most popular sounds this week </p>
 
       <div className="mps-content">
         <button className="mps-arrow left" onClick={() => scroll("left")}>

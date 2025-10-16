@@ -10,6 +10,13 @@
   box-sizing: border-box;
 }
 
+.balise {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
+}
+
 .mps-content {
   position: relative;
   display: flex;

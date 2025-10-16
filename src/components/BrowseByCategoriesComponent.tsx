@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 
 // style
 import "../css/browsebycategories.css";
+import "../css/mostPopularSounds.css";
 import { categories } from "../utils";
 
 interface BrowseByCategoriesProps {
@@ -44,7 +45,7 @@ export const BrowseByCategories = ({ onSelect }: BrowseByCategoriesProps) => {
 
   return (
     <div className="browsecontainer">
-      <p className="title">Browse by category</p>
+      <p className="balise">Browse by category</p>
       <div
         className="scroll-container"
         ref={scrollRef}
