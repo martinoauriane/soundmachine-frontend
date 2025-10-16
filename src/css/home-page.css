@@ -1,7 +1,15 @@
 .widgets {
-  display: table-header-group;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* espace entre les widgets */
+  padding: 20px;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.widget-large {
+  grid-column: span 2;
+}
+.widget-tall {
+  grid-row: span 2;
 }

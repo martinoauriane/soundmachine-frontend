@@ -17,8 +17,6 @@ function HomeScreen() {
       <div className="widgets">
         <MostPopularSoundsComponent />
         <UploadSound />
-      </div>
-      <div>
         <MostDownloaded />
       </div>
     </div>

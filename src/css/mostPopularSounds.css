@@ -1,8 +1,7 @@
 .most-popular-sounds {
   display: block;
-  width: 100%;
-  max-width: 1000px;
-  height: auto;
+  width: 700px;
+  height: 300px;
   margin: 20px;
   padding: 16px;
   border-radius: 10px;
