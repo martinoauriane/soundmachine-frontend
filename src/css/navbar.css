@@ -33,3 +33,15 @@
   border: none;
   cursor: pointer;
 }
+
+a {
+  font-family: "Courier New", Courier, monospace;
+  text-decoration: none;
+  color: rgb(139, 136, 135);
+  font-weight: 900;
+}
+
+a.active {
+  color: black;
+  text-decoration: none;
+}

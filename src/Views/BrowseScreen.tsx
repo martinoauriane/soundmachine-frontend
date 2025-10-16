@@ -12,7 +12,8 @@ import { soundsArray } from "../utils";
 
 //style
 import "../css/navbar.css";
-import "../css/widgets.css";
+import "../css/home-page.css";
+
 import Navbar from "../components/Navbar";
 
 function BrowseScreen() {
@@ -44,7 +45,7 @@ function BrowseScreen() {
     <div className="main">
       <Navbar />
       <BrowseByCategories onSelect={updateTracksList} />
-      <div>{listSounds}</div>
+      <div className="widgets">{listSounds}</div>
     </div>
   );
 }

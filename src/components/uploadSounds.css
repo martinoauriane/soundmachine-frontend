@@ -15,3 +15,9 @@
   transform: scale(1.05);
   background-color: #f5ff9d;
 }
+
+.generic-button {
+  display: table-caption;
+  align-items: center;
+  justify-content: center;
+}

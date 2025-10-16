@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import TrackPlayer from "../components/TrackPlayer";
 import "../css/navbar.css";
-import "../css/widgets.css";
+import "../css/home-page.css";
 import "../css/my-profile.css";
 
 // utils

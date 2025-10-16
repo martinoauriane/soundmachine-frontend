@@ -23,7 +23,7 @@ const Navbar = () => {
       <NavLink to="/browseSounds" className="navBarTitles">
         Browse sounds
       </NavLink>
-      <NavLink to="/my-profile"> My Profile </NavLink>
+      <NavLink to="/my-profile"> My profile </NavLink>
       <button className="button-none">
         <img
           className="logo"
