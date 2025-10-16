@@ -43,7 +43,10 @@ function BrowseScreen() {
   return (
     <div className="main">
       <Navbar />
+      {/* CATEGORIES */}
       <BrowseByCategories onSelect={updateTracksList} />
+
+      {/* TRACKS */}
       <div className="widgets">{listSounds}</div>
     </div>
   );

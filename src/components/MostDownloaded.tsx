@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
-
-//components
-import TrackPlayer from "../components/TrackPlayer";
-
 // utils
 import { Song } from "../utils";
 import { soundsArray } from "../utils";
-
 //style
 import "../css/navbar.css";
 import "../css/home-page.css";
@@ -17,10 +12,15 @@ import SoundBox from "./SoundBox";
 function MostDownloaded() {
   const [tracksArray, setTracksArray] = useState<Song[]>();
 
-  const mostDownloaded = soundsArray?.map((sound) => {
+  useEffect(() => {
+    setTracksArray(soundsArray);
+  }, [soundsArray]);
+
+  const mostDownloaded = tracksArray?.map((sound) => {
     return (
       <div className="space">
         <SoundBox trackName={sound.name} trackUrl={sound.url} />
+        <p> 33 listening</p>
       </div>
     );
   });

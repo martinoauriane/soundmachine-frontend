@@ -26,7 +26,8 @@
   width: 80px;
   height: 30px;
   border: none;
-  font-weight: 400;
+  font-size: 13px;
+  cursor: pointer;
 }
 
 .spacer {
