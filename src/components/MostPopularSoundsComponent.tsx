@@ -41,7 +41,7 @@ export function MostPopularSoundsComponent() {
   };
 
   return (
-    <div className="most-popular-sounds">
+    <div className="most-popular-sounds-container">
       <p className="balise"> Most popular sounds this week </p>
 
       <div className="mps-content">

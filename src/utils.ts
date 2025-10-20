@@ -43,4 +43,22 @@ export const soundsArray: Song[] = [
     type: "Jungle",
     creationDate: "9/10/2025",
   },
+  {
+    name: "Merry Christmas",
+    url: "/sounds/merry-christmas-sounds.mp3",
+    type: "Commercial",
+    creationDate: "11/10/2025",
+  },
+  {
+    name: "Emotional Ambient",
+    url: "/sounds/emotional-ambient.mp3",
+    type: "Ambient",
+    creationDate: "10/10/2025",
+  },
+  {
+    name: "Jungle Waves",
+    url: "/sounds/jungle-waves.mp3",
+    type: "Jungle",
+    creationDate: "9/10/2025",
+  },
 ];

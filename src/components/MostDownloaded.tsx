@@ -26,7 +26,7 @@ function MostDownloaded() {
   });
 
   return (
-    <div className="container">
+    <div className="mostdownloaded-container">
       <p className="balise"> My most downloaded sounds </p>
       {mostDownloaded}
     </div>

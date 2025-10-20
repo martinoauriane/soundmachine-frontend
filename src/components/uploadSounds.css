@@ -9,6 +9,7 @@
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
+  padding: 0px;
 }
 
 .update-button:hover {

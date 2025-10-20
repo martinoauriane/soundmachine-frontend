@@ -1,4 +1,4 @@
-.most-popular-sounds {
+.most-popular-sounds-container {
   display: block;
   width: 700px;
   height: 300px;
@@ -7,6 +7,13 @@
   border-radius: 10px;
   background-color: aquamarine;
   box-sizing: border-box;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge Legacy */
+}
+
+.most-popular-sounds-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge (Blink/Webkit) */
 }
 
 .balise {
