@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 //components
 import MostPopularSoundsComponent from "../components/MostPopularSoundsComponent";
 import UploadSound from "../components/UploadSound";
@@ -15,10 +14,10 @@ function HomeScreen() {
     <div className="web-container">
       <Navbar />
       <div className="widgets">
+        <PopularCategories />
+        <MostDownloaded />
         <MostPopularSoundsComponent />
         <UploadSound />
-        <MostDownloaded />
-        <PopularCategories />
       </div>
     </div>
   );

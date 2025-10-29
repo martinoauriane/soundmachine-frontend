@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 
 //components
-import SearchBar from "../components/InputSearch";
 import BrowseByCategories from "../components/BrowseByCategoriesComponent";
 import TrackPlayer from "../components/TrackPlayer";
 import Navbar from "../components/Navbar";
@@ -43,10 +41,10 @@ function BrowseScreen() {
   return (
     <div className="main">
       <Navbar />
-      {/* CATEGORIES */}
+      {/* categories */}
       <BrowseByCategories onSelect={updateTracksList} />
 
-      {/* TRACKS */}
+      {/* tracks */}
       <div className="widgets">{listSounds}</div>
     </div>
   );

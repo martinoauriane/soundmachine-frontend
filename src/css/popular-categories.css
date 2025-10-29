@@ -1,0 +1,11 @@
+.popular-category-container {
+  flex: 1;
+  flex-direction: column;
+  background-color: rgb(245, 202, 210);
+  border-radius: 1rem;
+  width: 200px;
+  height: 250px;
+  z-index: 20;
+  align-items: center;
+  justify-content: center;
+}

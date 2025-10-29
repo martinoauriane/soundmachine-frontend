@@ -3,24 +3,21 @@ import { useState, useEffect } from "react";
 import { categories } from "../utils";
 //style
 import "../css/home-page.css";
+import "../css/popular-categories.css";
 
 function PopularCategories() {
   const [popularCategories, setPopularCategories] = useState<string[]>([]);
 
   useEffect(() => {
-    setPopularCategories(categories.slice(3, 9)); // just for demo
+    setPopularCategories(categories.slice(3, 9));
   }, []);
 
   const mostPopular = popularCategories?.map((category) => {
-    return (
-      <div className="space">
-        <button className="generic-button"> {category}</button>
-      </div>
-    );
+    return <button className="generic-button"> {category}</button>;
   });
 
   return (
-    <div className="category-container">
+    <div className="popular-category-container">
       <p className="balise"> Popular categories </p>
       {mostPopular}
     </div>

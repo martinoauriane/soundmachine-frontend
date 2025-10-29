@@ -1,8 +1,11 @@
 .widgets {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap;
 }
 
 .widget-large {

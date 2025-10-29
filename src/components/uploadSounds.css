@@ -1,7 +1,6 @@
-.update-button {
+.upload-sound-component {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   background-color: #feffa7;
   border: none;
   width: 500px;
@@ -9,7 +8,8 @@
   border-radius: 20px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
-  padding: 0px;
+  align-items: center;
+  justify-content: center;
 }
 
 .update-button:hover {
@@ -21,4 +21,10 @@
   display: table-caption;
   align-items: center;
   justify-content: center;
+}
+
+input[type="file"] {
+  color: #222245;
+  padding: 8px 12px;
+  background-color: #feffa7;
 }
