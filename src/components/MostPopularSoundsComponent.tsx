@@ -6,9 +6,6 @@ import { soundsArray } from "../utils";
 // style
 import "../css/mostPopularSounds.css";
 import "../css/generic.css";
-import { Box } from "@mui/material";
-import Spacer from "./spacer";
-import ArrowButton from "./ArrowButton";
 
 export function MostPopularSoundsComponent({ title }: any) {
   const [inputText, setInputText] = useState("");

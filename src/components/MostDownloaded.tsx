@@ -16,19 +16,18 @@ function MostDownloaded() {
     setTracksArray(soundsArray);
   }, [soundsArray]);
 
-  const mostDownloaded = tracksArray?.map((sound) => {
+  const horizontalMostDownloaded = tracksArray?.map((sound) => {
     return (
-      <div className="space">
+      <div className="sound">
         <SoundBox trackName={sound.name} trackUrl={sound.url} />
-        <p> 33 listening</p>
       </div>
     );
   });
 
   return (
     <div className="mostdownloaded-container">
-      <p className="balise"> My most downloaded sounds </p>
-      {mostDownloaded}
+      <p className="title"> My most downloaded sounds </p>
+      <div className="download-list">{horizontalMostDownloaded}</div>
     </div>
   );
 }

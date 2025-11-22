@@ -27,3 +27,15 @@
   margin-top: 10px;
   padding: 10px;
 }
+
+.download-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0 8px;
+  padding: 8px;
+  gap: 16px;
+  flex-wrap: nowrap; /* horizontal scroll */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
