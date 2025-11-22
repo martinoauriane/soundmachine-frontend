@@ -7,16 +7,13 @@
   border-radius: 10px;
   background-color: aquamarine;
   box-sizing: border-box;
-  overflow-x: scroll;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge Legacy */
 }
 
 .most-popular-sounds-container::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge (Blink/Webkit) */
 }
 
-.balise {
+.title {
   font-family: "Archivo Black", sans-serif;
   font-size: 20px;
   font-weight: 100;
@@ -27,7 +24,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
 .sound-box-list {
@@ -59,31 +55,34 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge Legacy */
 }
 
 .mps-arrow {
   background: transparent;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: 4px;
+  padding: 2px;
 }
 
 .mps-arrow img {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 .mps-arrow.left {
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
 .mps-arrow.right {
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 .sound-box {

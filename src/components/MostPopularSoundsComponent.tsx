@@ -10,7 +10,7 @@ import { Box } from "@mui/material";
 import Spacer from "./spacer";
 import ArrowButton from "./ArrowButton";
 
-export function MostPopularSoundsComponent() {
+export function MostPopularSoundsComponent({ title }: any) {
   const [inputText, setInputText] = useState("");
   const [sounds, setSounds] = useState([]);
   const [mostPopularSounds, setMostPopularSounds] = useState<Sound[]>([]);
@@ -42,7 +42,7 @@ export function MostPopularSoundsComponent() {
 
   return (
     <div className="most-popular-sounds-container">
-      <p className="balise"> Most popular sounds this week </p>
+      <p className="title"> {title} </p>
 
       <div className="mps-content">
         <button className="mps-arrow left" onClick={() => scroll("left")}>

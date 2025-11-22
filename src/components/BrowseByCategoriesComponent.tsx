@@ -45,7 +45,7 @@ export const BrowseByCategories = ({ onSelect }: BrowseByCategoriesProps) => {
 
   return (
     <div className="browsecontainer">
-      <p className="balise">Browse by category</p>
+      <p className="title">Browse by category</p>
       <div
         className="scroll-container"
         ref={scrollRef}

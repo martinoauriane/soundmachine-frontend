@@ -48,7 +48,6 @@ const UserBarComponent = () => {
           </div>
         </div>
         <div className="user-actions">
-          <button className="btn">Settings</button>
           <button className="btn">Edit Profile</button>
         </div>
       </div>

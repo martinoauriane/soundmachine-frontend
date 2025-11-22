@@ -3,9 +3,20 @@
   flex-direction: column;
   background-color: rgb(245, 202, 210);
   border-radius: 1rem;
-  width: 200px;
-  height: 250px;
+  width: 400px;
+  height: 280px;
   z-index: 20;
   align-items: center;
   justify-content: center;
+}
+
+.title {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
 }

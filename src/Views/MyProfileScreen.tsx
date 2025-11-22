@@ -21,10 +21,9 @@ export interface UserProfile {
 
 const UserProfileScreen = () => {
   const [user, setUser] = useState<UserProfile | null>(null);
-  const [activeTab, setActiveTab] = useState<"library" | "uploaded">("library");
+  const [isUploaded, setIsUploaded] = useState<boolean>(false);
 
   useEffect(() => {
-    // ici tu peux récupérer les données depuis ton backend
     const mockUser: UserProfile = {
       name: "John Doe",
       photoUrl: "https://via.placeholder.com/150",
@@ -38,7 +37,7 @@ const UserProfileScreen = () => {
 
   if (!user) return <div>Loading...</div>;
 
-  const tracksToShow = activeTab === "library" ? user.library : user.uploaded;
+  const tracksToShow = user.uploaded;
 
   return (
     <div className="main">
@@ -46,15 +45,15 @@ const UserProfileScreen = () => {
       <UserBarComponent />
 
       <div className="tabs">
-        <button
+        {/*   <button
           className={activeTab === "library" ? "tab active" : "tab"}
           onClick={() => setActiveTab("library")}
         >
           Library
-        </button>
+        </button> */}
         <button
-          className={activeTab === "uploaded" ? "tab active" : "tab"}
-          onClick={() => setActiveTab("uploaded")}
+          /*           className={activeTab === "uploaded" ? "tab active" : "tab"}
+           */ onClick={() => setIsUploaded(true)}
         >
           Uploaded
         </button>
@@ -67,10 +66,6 @@ const UserProfileScreen = () => {
           </div>
         ))}
       </div>
-
-      <audio controls loop>
-        <source src="../../public/sounds/fakesound.mp3"></source>
-      </audio>
     </div>
   );
 };

@@ -14,10 +14,16 @@ function HomeScreen() {
     <div className="web-container">
       <Navbar />
       <div className="widgets">
-        <PopularCategories />
+        <div className="twins">
+          <MostPopularSoundsComponent title="Most popular sounds this week" />
+          <div className="twin2">
+            <UploadSound />
+          </div>
+          <div className="twin3">
+            <PopularCategories />
+          </div>
+        </div>
         <MostDownloaded />
-        <MostPopularSoundsComponent />
-        <UploadSound />
       </div>
     </div>
   );

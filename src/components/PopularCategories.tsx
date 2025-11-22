@@ -18,7 +18,7 @@ function PopularCategories() {
 
   return (
     <div className="popular-category-container">
-      <p className="balise"> Popular categories </p>
+      <p className="title"> Popular categories </p>
       {mostPopular}
     </div>
   );
