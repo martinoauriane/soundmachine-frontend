@@ -1,11 +1,16 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 // components
 import SearchBar from "./InputSearch";
 // style
 import "../css/navbar.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  function toSettings() {
+    navigate("/settings");
+  }
   return (
     <div className="nav-bar">
       <img
@@ -26,7 +31,7 @@ const Navbar = () => {
       <NavLink to="/my-profile">
         <p className="archivo-black-regular"> PROFILE </p>
       </NavLink>
-      <button className="button-none">
+      <button className="button-none" onClick={toSettings}>
         <img
           className="settings"
           src="/theme/setting.png"
