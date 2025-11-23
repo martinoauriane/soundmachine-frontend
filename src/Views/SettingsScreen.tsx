@@ -1,17 +1,11 @@
-import { useState, useEffect } from "react";
-
 //components
-import BrowseByCategories from "../components/BrowseByCategoriesComponent";
-import TrackPlayer from "../components/TrackPlayer";
 import Navbar from "../components/Navbar";
-
-// utils
-import { Song } from "../utils";
-import { soundsArray } from "../utils";
 
 //style
 import "../css/navbar.css";
 import "../css/home-page.css";
+import "../css/settings.css";
+import "../css/generic.css";
 
 function SettingScreen() {
   // rendering each sound with TrackPlayer (play/pause)
@@ -19,7 +13,13 @@ function SettingScreen() {
   return (
     <div className="main">
       <Navbar />
-      <button> Delete account </button>
+      <p className="title"> Settings </p>
+      <div className="menu">
+        <button> My account </button>
+        <button> Stockage </button>
+        <button> Modèle d'abonnement </button>
+        <button> Log out </button>
+      </div>
     </div>
   );
 }

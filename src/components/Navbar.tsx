@@ -39,16 +39,6 @@ const Navbar = () => {
           style={{ visibility: "visible" }}
         />
       </button>
-      <button className="button-none">
-        <img
-          className="logo"
-          src="/theme/log-out.png"
-          alt="sun"
-          style={{
-            visibility: "visible",
-          }}
-        />
-      </button>
     </div>
   );
 };

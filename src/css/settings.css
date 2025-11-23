@@ -1,0 +1,7 @@
+.menu {
+  display: flex;
+  position: absolute;
+  display: inline-grid;
+  left: 14px;
+  top: 200px;
+}
